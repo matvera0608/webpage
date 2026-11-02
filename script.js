@@ -180,6 +180,14 @@ document.addEventListener('DOMContentLoaded', () => {
                             themeIcon.className = isDark ? 'fa-regular fa-moon text-base' : 'fa-regular fa-sun text-base text-amber-400';
                      }
               }
+
+              // Icono para móvil (¡Esto era lo que faltaba actualizar!)
+              if (themeToggleMobile) {
+                     const themeIconMobile = themeToggleMobile.querySelector('i');
+                     if (themeIconMobile) {
+                            themeIconMobile.className = isDark ? 'fa-regular fa-moon text-base' : 'fa-regular fa-sun text-base text-amber-400';
+                     }
+              }
        }
 
        if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
