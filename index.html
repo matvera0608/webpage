@@ -80,7 +80,7 @@
 
                     <!-- Enlace dinámico del CV -->
                     <a id="cvLink" href="#" download
-                        class="px-4 py-2 text-xs font-semibold uppercase tracking-wider bg-blue-600/10 hover:bg-blue-600/20 text-blue-400 border border-blue-500/30 rounded-xl transition-all flex items-center gap-2">
+                        class="mt-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider bg-blue-600/10 hover:bg-blue-600/20 text-blue-600 dark:text-blue-400 border border-blue-500/30 rounded-xl transition-all flex items-center justify-center gap-2">
                         <i class="fa-solid fa-file-arrow-down"></i>
                         <span data-i18n="nav_cv">CV</span>
                     </a>
@@ -168,6 +168,12 @@
                         data-i18n="nav_contacto">Contacto</a>
                 </nav>
 
+                <!-- Enlace dinámico del CV para Móvil -->
+                <a id="cvLinkMobile" href="#" download
+                    class="mt-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider bg-blue-600/10 hover:bg-blue-600/20 text-blue-600 dark:text-blue-400 border border-blue-500/30 rounded-xl transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-file-arrow-down"></i>
+                    <span data-i18n="nav_cv">CV</span>
+                </a>
                 <!-- Selector de Idiomas y Tema para Móvil -->
                 <div
                     class="flex items-center justify-between pt-2 border-t border-gray-800">
@@ -202,7 +208,7 @@
                     </div>
 
                     <button id="themeToggleMobile"
-                        class="p-2 rounded-lg bg-gray-900 border border-gray-800 text-gray-400 hover:text-white transition-colors shadow-sm"
+                        class="p-2 rounded-lg bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-800 text-gray-700 dark:text-gray-400 hover:text-blue-600 dark:hover:text-white transition-colors shadow-sm"
                         title="Cambiar Tema">
                         <i class="fa-regular fa-moon text-base"></i>
                     </button>

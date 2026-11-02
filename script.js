@@ -138,10 +138,13 @@ function setLanguage(lang) {
               }
        });
 
-       const cvLink = document.getElementById('cvLink');
-       if (cvLink) {
-              cvLink.href = `Currículum Vitae Vera Ramiro Mateo_${lang}.pdf`;
-       }
+       // Actualización centralizada y DRY para cualquier enlace de CV en la página
+       const cvFileName = `Currículum Vitae Vera Ramiro Mateo_${lang}.pdf`;
+
+       const cvLinks = document.querySelectorAll('#cvLink, #cvLinkMobile');
+       cvLinks.forEach(link => {
+              link.href = cvFileName;
+       });
 
        if (lang === 'ar') {
               document.documentElement.setAttribute('dir', 'rtl');
