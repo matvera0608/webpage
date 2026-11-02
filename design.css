@@ -1,0 +1,97 @@
+body {
+       font-family: 'Inter', sans-serif;
+       background-color: #ffffff;
+       /* Fondo claro general por defecto */
+       color: #0f172a;
+       /* Texto general oscuro por defecto */
+       transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Cuando la etiqueta html tiene la clase dark (Modo Oscuro) */
+html.dark body {
+       background-color: #0b162c;
+       color: #f3f4f6;
+}
+
+/* Aseguramos que los títulos principales se adapten al modo claro */
+h1,
+h2,
+h3,
+h4 {
+       color: #0f172a;
+}
+
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4 {
+       color: #ffffff;
+}
+
+/* Tarjetas y contenedores adaptativos para modo claro y oscuro */
+.card-light-fix {
+       background-color: #ffffff;
+       border-color: #9fbbdf;
+}
+
+.card-light-fix p,
+.card-light-fix li {
+       color: #475569;
+       /* Gris oscuro legible sobre fondo blanco */
+}
+
+html.dark .card-light-fix {
+       background-color: #131924;
+       border-color: #1f2937;
+}
+
+html.dark .card-light-fix p,
+html.dark .card-light-fix li {
+       color: #d1d5db;
+       /* Gris claro legible sobre fondo oscuro */
+}
+
+/* Dark grid effect overlay */
+.grid-bg {
+       background-image: radial-gradient(rgba(56, 91, 141, 0.15) 2px, transparent 2px);
+       background-size: 32px 32px;
+}
+
+html.dark .grid-bg {
+       background-image: radial-gradient(rgba(48, 152, 148, 0.453) 2px, transparent 2px);
+}
+
+.glow-card:hover {
+       box-shadow: 0 0 25px -5px rgb(40, 0, 170);
+}
+
+/* Forzar que cualquier botón con la clase active se vea azul con texto blanco */
+.filter-btn.active {
+       background-color: #195ced !important;
+       /* bg-blue-600 */
+       color: #ffffff !important;
+       border-color: #3b82f6 !important;
+       box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+       width: 8px;
+}
+
+::-webkit-scrollbar-track {
+       background: #20272d;
+}
+
+::-webkit-scrollbar-thumb {
+       background: #101721;
+       border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+       background: #33476a;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+       background: #5c739c;
+}
