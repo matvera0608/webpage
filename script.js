@@ -29,9 +29,10 @@ function openModal(key) {
 
        // Detectamos el idioma actual desde el atributo lang del documento (o una variable global de idioma)
        const currentLang = document.documentElement.getAttribute('lang') || 'es';
-
        // Obtenemos el diccionario del idioma activo o caemos en español por defecto
        const t = translations[currentLang] || translations['es'];
+
+       const btnCloseText = t['btn_close'] || 'Cerrar';
 
        // Extraemos dinámicamente el título, categoría y detalles traducidos
        const category = t[`${key}_category`] || '';
@@ -51,9 +52,7 @@ function openModal(key) {
                      ${details}
               </div>
               <div class="flex items-center justify-end gap-3 pt-2">
-                     <button onclick="closeModal()" class="px-4 py-2 bg-gray-900 text-gray-300 hover:text-white text-xs font-semibold rounded-lg border border-gray-800">
-                     Cerrar
-                     </button>
+                     <button onclick="closeModal()" class="px-4 py-2 bg-gray-900 text-gray-300 hover:text-white text-xs font-semibold rounded-lg border border-gray-800" >${btnCloseText}</button>
               </div>
               `;
               modal.classList.remove('hidden');
