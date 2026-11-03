@@ -14,7 +14,7 @@ const projectDetails = {
        },
        RealESRGAN: {
               category: "Visión por Computadora & IA",
-              title: "Editor de Fotos IA (Real-ESRGAN & Background Removal)"
+              title: "Editor de Fotos IA (Real-ESRGAN & Eliminación de fondo)"
        },
        CoquiTTS: {
               category: "Deep Learning & Audio Synthesis",
